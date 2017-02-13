@@ -1,0 +1,350 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	background-color: rgba(0, 0, 0,.8);
+	overflow: hidden;
+}
+/*头部*/
+header {
+	width: 100%;
+	height: 24px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+header a {
+	width: 100%;
+	color: #575761;
+	text-align: center;
+	font: 14px /24px arial,"微软雅黑";
+}
+.player_logo,.player_logo a {
+	float: left;
+	height: 100%;
+	text-indent: -99999px;
+}
+.player_logo {
+	width: 80px;
+}
+.player_logo a {
+	margin-left: 20px;
+	background: url(../images/player_logo.png) no-repeat;
+	opacity: .3;
+}
+.player_login,.player_login a {
+	float: right;
+	height: 100%;
+}
+.player_login {
+	width: 50px;
+}
+.player_login a {
+	margin-right: 50px;
+}
+/*播放器body*/
+.player_bd {
+	width: 85%;
+	height: 78%;
+	margin: 0 auto;
+}
+.player_style_normal,.player_song_info {
+	float: left;
+	height: 100%;
+}
+.player_style_normal {
+	width: 60%;
+	margin-right: 10%;
+	/*background-color: pink;*/
+}
+.song_list {
+	margin-bottom: 10px;
+}
+.song_list a {
+	width: 118px;
+	height: 34px;
+	display: inline-block;
+	border: 1px solid #9d9ca1;
+	color: #9d9ca2;
+	border-radius: 4px;
+	font: 14px /34px arial,"微软雅黑";
+}
+.song_list i {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin-left: 34px;
+	margin-top: 9px;
+}
+.song_list a:nth-of-type(1) i {
+	background: url(../images/icon_sprite.png) -60px 0;
+}
+.song_list a:nth-of-type(2) i {
+	background: url(../images/icon_sprite.png) -20px 0;
+}
+.song_list a:nth-of-type(3) i {
+	background: url(../images/icon_sprite.png) -40px -220px;
+}
+.song_list a:nth-of-type(4) i {
+	background: url(../images/icon_sprite.png) -100px 0px;
+}
+.songlist_header,.songlist_content li {
+	width: 100%;
+	height: 50px;
+}
+.songlist_content {
+	margin-top: 5px;
+}
+.songlist_header li {
+	color: #7a99ba;
+	font: 14px /50px arial,"微软雅黑";
+	float: left;
+}
+.songlist_header li:nth-of-type(1) input {
+	margin-right: 20px;
+}
+.songlist_header li:nth-of-type(2),.songlist_content li div:nth-of-type(1) {
+	width: 60%;
+	height: 100%;
+}
+.songlist_header li:nth-of-type(3),.songlist_content li div:nth-of-type(2) {
+	width: 25%;
+	height: 100%;
+}
+.songlist_header li:nth-of-type(4),.songlist_content li div:nth-of-type(3) {
+	width: 8%;
+	height: 100%;
+}
+.songlist_content li{
+	cursor: pointer;
+}
+.songlist_content li input,.songlist_content li em,.songlist_content li span,.songlist_content li div {
+	float: left;
+}
+.songlist_content li span,.songlist_content li div,.songlist_content li em {
+	color: #fff;
+	font: 14px /50px arial,"微软雅黑";
+}
+.songlist_content li em {
+	width: 20px;
+	height: 50px;
+	text-indent: 5px;
+	/*display: none;*/
+}
+.songlist_content li span {
+	width: 10px;
+	height: 10px;
+	margin-left: 3px;
+	margin-right: 7px;
+	background: url(../images/wave.gif) no-repeat;
+	margin-top: 20px;
+	display: none;
+}
+.player_song_info {
+	width: 30%;
+	/*background-color: white;*/
+	position: relative;
+}
+.song_info {
+	width: 100%;
+	height: 285px;
+}
+.song_bg {
+	width: 65%;
+	height: 180px;
+	position: absolute;
+	top: 0;
+	left: 15%;
+}
+.song_bg img {
+	width: 100%;
+	height: 100%;
+}
+#bg_pic {
+	position: relative;
+	width: 55%;
+	height: 186px;
+	top: 0;
+	left: 17%;
+}
+.song_name,.singer_name,.album_name {
+	width: 100%;
+	height: 28px;
+	font: 12px /28px arial,"微软雅黑";
+	color: #fff;
+	text-align: center;
+}
+.song_name {
+	margin-top: 10px;
+}
+.song_info1{
+	width: 100%;
+	height: 30%;
+	margin-top: 20px;
+	position: relative;
+	overflow: hidden;
+}
+#song_liric {
+	width: 100%;
+	position: absolute;
+	left:0;
+	top: 0;
+}
+#song_liric li {
+	width: 100%;
+	font: 14px /32px arial,"微软雅黑";
+	color: #acab91;
+	text-align: center;
+	margin-bottom: 1px;
+	height: 32px;
+}
+.player_ft {
+	width: 85%;
+	height: 20%;
+	margin: 10px auto;
+	position: absolute;
+	top: 90%;
+	left: 5%;
+}
+.player_btn,.player_progress,.player_menu {
+	float: left;
+}
+.player_btn {
+	width: 18%;
+	height: 100%;
+}
+.player_btn a {
+	float: left;
+	margin-top: 5px;
+}
+#prev {
+	width: 22px;
+	height: 22px;
+	background: url(../images/player.png) 0 -30px;
+}
+#sto {
+	width: 22px;
+	height: 30px;
+	/*background: url(../images/player.png) -27px -4px;*/
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.sto {
+	background: url(../images/player.png) 0px 0px;
+}
+#next {
+	width: 22px;
+	height: 22px;
+	background: url(../images/player.png) 0 -52px;
+}
+.player_progress {
+	width: 47%;
+	height: 100%;
+	position: relative;
+}
+#line,#dot,#voice_rect {
+	position: absolute;
+}
+#line {
+	width: 100%;
+	height: 2px;
+	top: 25px;
+	background-color: rgba(255,255,255,.3);
+}
+#dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	top: 20px;
+	left: 0px;
+	background-color: white;
+}
+#voice_rect{
+	/*width: 50%;*/
+	height: 2px;
+	top: 25px;
+	background-color: white;
+}
+.player_menu {
+	width: 35%;
+	height: 100%;
+}
+#progress_singer,#progress_timer {
+	font: 12px /20px arial,"微软雅黑";
+	color: #b2b2b5;
+}
+#progress_timer span,#progress_timer strong {
+	display: inline-block;
+}
+.menu1 {
+	width: 26px;
+	height: 20px;
+}
+.menu_f1,.menu_f2,.menu_f3 {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.menu_f1 {
+	background: url(../images/player.png)  0 -74px;
+	margin-left: 50px;
+}
+.menu_f2 {
+	background: url(../images/player.png)  0 -96px;
+}
+.menu_f3 {
+	background: url(../images/player.png)  0 -120px;
+}
+#menu_btn {
+	width: 74px;
+	height: 28px;
+	float: left;
+	/*background: url(../images/player.png) 0px -311px;*/
+	/*background: url(../images/player.png)  0 -282px;*/
+}
+.sto1 {
+	background: url(../images/player.png)  0 -282px;
+}
+#menu_voice {
+	position: relative;
+}
+#voice_dot,#voice_line {
+	position: absolute;
+	background-color: #fff;
+}
+#voice_line {
+	width: 100px;
+	height: 2px;
+	left: 50px;
+	top: 10px;
+}
+#voice_dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	left: 60px;
+	top: 6px;
+}
+.menu_f4 {
+	background: url(../images/player.png)  0 -144px;
+	margin-left: 15px;
+}
+#mask{
+	width: 84%;
+	height: 55%;
+	position: absolute;
+	z-index: 100;
+	top: 20%;
+	left: 7%;
+	overflow: hidden;
+	display: none;
+}
+#player_mask {
+	position: relative;
+	margin: 0 auto;
+}
+#player_mask li {
+	height: 58px;
+	color: #fff;
+	text-align: center;
+	font: 22px /58px arial,"微软雅黑";
+}

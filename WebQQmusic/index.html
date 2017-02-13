@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/data.js"></script>
+		<script src="js/tools.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="player_logo clearfix">
+				<a href="#">qq音乐</a>
+			</div>
+			<div class="player_login">
+				<a href="#">登录</a>
+			</div>
+		</header>
+		<div class="player_bd clearfix" id="player_bd1">
+			<div class="player_style_normal">
+				<div class="song_list">
+					<a href="#">
+						<i></i>
+						收藏
+					</a>
+					<a href="#">
+						<i></i>
+						添加到
+					</a>
+					<a href="#">
+						<i></i>
+						下载
+					</a>
+					<a href="#">
+						<i></i>
+						删除
+					</a>
+				</div>
+				<ul class="songlist_header clearfix">
+					<li>
+						<input type="checkbox" name="" id="" value="" />
+					</li>
+					<li>歌曲</li>
+					<li>歌手</li>
+					<li>时长</li>
+				</ul>
+				<ul class="songlist_content" id="songlist_content1">
+					<!--<li class="clearfix">-->
+						<!--<input type="checkbox" name="" id="" value="" />-->
+						<!--<em>1</em>-->
+						<!--<span style="display: block;"></span>-->
+						<!--<div>-->
+							<!--我的梦-->
+						<!--</div>-->
+						<!--<div>-->
+							<!--张靓颖-->
+						<!--</div>-->
+						<!--<div>-->
+							<!--03:39-->
+						<!--</div>-->
+					<!--</li>-->
+					<!--<li class="clearfix">-->
+						<!--<input type="checkbox" name="" id="" value="" />-->
+						<!--<em style="display: block;">2</em>-->
+						<!--<span id=""></span>-->
+						<!--<div>-->
+							<!--See You Again-->
+						<!--</div>-->
+						<!--<div>-->
+							<!--Wiz Khalifa /…-->
+						<!--</div>-->
+						<!--<div>-->
+							<!--03:49-->
+						<!--</div>-->
+					<!--</li>-->
+				</ul>
+			</div>
+			<div class="player_song_info">
+			 	<div class="song_info">
+			 		<div class="song_bg">
+			 			<img src="images/album_cover_player.png"/>
+			 		</div>
+			 		<img src="" id="bg_pic"/>
+			 		<div class="song_name" id="song_name1"></div>
+			 		<div class="singer_name" id="singer_name1"></div>
+			 		<div class="album_name" id="album_name1"></div>
+			 	</div>
+				<div class="song_info1">
+					<ul id="song_liric"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="player_ft clearfix">
+			<audio id="audio1"></audio>
+			<div class="player_btn">
+				<a href="#" id="prev"></a>
+				<a href="#" id="sto" class="sto"></a>
+				<a href="#" id="next"></a>
+			</div>
+			<div class="player_progress clearfix" id="player_progress1">
+				<div id="progress_singer" class="fl">
+					<!--我的梦 — 张靓颖-->
+				</div>
+				<div id="progress_timer" class="fr">
+					<span id="timer_current"></span> /
+					<strong id="timer_total"></strong>
+				</div>
+				<div id="line"></div>
+				<div id="dot"></div>
+				<div id="voice_rect" class="fl"></div>
+			</div>
+			<div class="player_menu clearfix">
+				<a href="#" class="fl menu1 menu_f1"></a>
+				<a href="#" class="fl menu1 menu_f2"></a>
+				<a href="#" class="fl menu1 menu_f3"></a>
+				<a href="#" id="menu_btn" class="sto1"></a>
+				<div id="menu_voice" class="fl">
+					<a href="#" class="fl menu1 menu_f4"></a>
+					<div id="voice_dot" class="fl"></div>
+					<div id="voice_line" class="fl"></div>
+				</div>
+			</div>
+		</div>
+		<div id="mask">
+			<ul id="player_mask"></ul>
+		</div>
+	</body>
+</html>

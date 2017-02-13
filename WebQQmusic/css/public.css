@@ -1,0 +1,30 @@
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.songlist_header li:nth-of-type(1) input,.songlist_content li input {
+	width: 14px;
+	height: 14px;
+	border: 1px solid #0d0c18;
+	margin-top: 18px;
+	opacity: 0.3;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+/*播放暂停*/
+.active {
+	background: url(../images/player.png) -27px -4px;
+}
+/*模式切换*/
+.player_menu .active1 {
+	background: url(../images/player.png) 0px -311px;
+}
+#song_liric .color1,#player_mask .color1{
+	color: green;
+	font-weight: bold;
+}
