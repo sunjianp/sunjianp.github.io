@@ -14,8 +14,7 @@
 	*       userAssessment: @value String         []        自我评价
 	*       userHobby: @value Array              []          爱好
 	*       userAward:@value Array               []          奖项
-	*
-	*
+	
 	*   }
 */
 
