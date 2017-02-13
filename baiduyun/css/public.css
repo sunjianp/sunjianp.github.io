@@ -1,0 +1,53 @@
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+/*login登录页*/
+.login_nav1 .active{
+	background-color: #1e77d6;
+}
+/**/
+.root_list li:hover{
+	background-color: #e4e9ec;
+}
+.container_wrap .active1 span{
+	background: url(../imges/login/sprit10.png) -36px -44px;
+}
+.container_wrap .active1{
+    border: 1px solid cornflowerblue;
+}
+.container_wrap li:hover{
+	border: 1px solid cornflowerblue;
+}
+.container_wrap li:hover span{
+	/*background: url(../imges/login/sprit10.png) 0 -44px;*/
+    background: url(../imges/login/sprit10.png) -36px -44px;
+}
+.bd_menucont .active2{
+    background: url("../imges/login/sprit10.png") no-repeat -40px -2px;
+}
+#min_filelist li:hover {
+    border: 2px solid cornflowerblue;
+}
+#min_filelist li:hover em{
+    background: url(../imges/login/sprit10.png) -36px -44px;
+}
+#filelist_btn strong:hover{
+    border: 4px solid cornflowerblue;
+}
+#filelist_btn span:hover{
+    border: 4px solid cornflowerblue;
+}
+#min_filelist .active3{
+    border: 2px solid cornflowerblue;
+}
+#min_filelist .active3 em{
+    background: url(../imges/login/sprit10.png) -36px -44px;
+}

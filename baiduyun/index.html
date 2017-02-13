@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>百度云</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+    	<link rel="stylesheet" href="bs/css/bootstrap.css" />
+	    <link rel="stylesheet" href="css/reset.css">
+	    <link rel="stylesheet" href="css/public.css">
+	    <link rel="stylesheet" href="css/index.css">
+	    <script src="js/jquery.min.js"></script>
+	    <script src="js/data.js"></script>
+	    <script src="js/model.js"></script>
+	    <script src="js/index.js"></script>
+	    <script src="js/tools.js"></script>
+	    <script src="js/fn.js"></script>
+	</head>
+	<body>
+		<header class="bd_header clearfix">
+			<span class="fl">百度网盘</span>
+			<ul class="fl bd_list1">
+				<li class="fl">网盘</li>
+				<li class="fl">分享</li>
+				<li class="fl">更多</li>
+			</ul>
+			<div class="fr bd_items">
+				<ul class="fr items_list">
+					<li class="fr"><a href="http://help.baidu.com/">会员中心</a></li>
+					<li class="fr"><a href="http://rj.baidu.com/">客户端下载</a></li>
+					<li class="fr">更多通知</li>
+				</ul>
+				<div class="register2 fr"><a href="login.html">登录</a></div>
+				<div class="fr items_ser">
+					<input type="text" name="" id="ser_text" value="" placeholder="搜索你的文件" /><button id="ser_btn">搜索</button>
+				</div>
+			</div>
+		</header>
+		<section class="bd_content">
+			<div class="bt_root">
+				<h3 class="root_title">
+					<span class="glyphicon glyphicon-book"></span>全部文件
+				</h3>
+				<ul class="root_list">
+					<li>图片</li>
+					<li>文档</li>
+					<li>视频</li>
+					<li>种子</li>
+					<li>音乐</li>
+					<li>其它</li>
+				</ul>
+				<h3 class="root_title root_share">
+					<li><span class="glyphicon glyphicon-share"></span>分享到</li>
+				</h3>
+				<h3 class="root_title root_share">
+					<li><span class="glyphicon glyphicon-trash"></span>回收站</li>
+				</h3>
+				<div class="progress root_progress1">
+					<div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+					    20%
+					</div>
+				</div>
+				<p>
+					219.71G  /  2068G
+					<span>扩容</span>
+				</p>
+			</div>
+			<div class="bt_contains">
+				<div class="contains_list">
+					<ul class="clearfix">
+						<li class="fl">
+							<span class="glyphicon glyphicon-open"></span>上传
+						</li>
+						<li class="fl" id="creat_floder">
+							<span class="glyphicon glyphicon-plus"></span>新建文件夹
+						</li>
+						<li class="fl">
+							<span class="glyphicon glyphicon-save"></span>离线下载
+						</li>
+						<li class="fl" id="reset_btn">
+							<span class="glyphicon glyphicon-phone"></span>恢复初始界面
+						</li>
+					</ul>
+				</div>
+				<div class="bd_counts">
+					<div id="counts_head" class="fl"><span class="fl">全部文件</span></div>
+					<div id="nav_container" class="fl">
+						<!--<div class="fl counts_text">默认文件夹</div>-->
+						<!--<div class="fl counts_text"><span class="fl">我的文档</span></div>-->
+						<!--<div class="fl counts_text"><span class="fl">我的照片</span></div>-->
+					</div>
+					<span class="fr">已全部加载，共<strong id="total">5</strong>个</span>
+				</div>
+				<div class="bd_menucont">
+					<em id="" class="check_coin fl"></em>已选中：<strong id="count">0</strong>个文件夹/文件
+					<div class="bd_detail clearfix">
+						<span id="">分享</span>
+						<span id="">下载</span>
+						<span id="rename">重命名</span>
+						<span id="delet">删除</span>
+						<span id="take_move">移动到</span>
+					</div>
+				</div>
+				<ul class="container_wrap">
+					<!--<li class="active1 floder item">
+						<span></span>
+						<img src="imges/login/04.png"/>-->
+						<!--<input type="text" name="" id="" value="" />-->
+						<!--<div style="display: block;">新建文件夹</div>
+					</li>
+					<li>
+						<span></span>
+						<img src="imges/login/04.png"/>
+						<input type="text" name="" id="" value="" />-->
+						<!--<div>新建文件夹</div>-->
+					<!--</li>-->
+				</ul>
+			</div>
+			<div class="bt_footer"></div>
+		</section>
+		<div id="my_mask">
+			<ul id="min_filelist">
+				<li>
+					<em class="fl"></em>
+					<span class="fl"></span>
+					默认文件夹
+				</li>
+				<!--<li>-->
+					<!--<em class="fl"></em>-->
+					<!--<span class="fl"></span>-->
+					<!--默认文件夹-->
+				<!--</li>-->
+				<!--<li>-->
+					<!--<em class="fl"></em>-->
+					<!--<span class="fl"></span>-->
+					<!--默认文件夹-->
+				<!--</li>-->
+			</ul>
+			<div id="filelist_btn">
+				<span id="cancle" class="fr">取消</span>
+				<strong id="sure" class="fr">确定</strong>
+			</div>
+		</div>
+		<div id="tips"></div>
+		<!--<div id="circle"></div>-->
+		<!--<div id="box"></div>-->
+	</body>
+</html>
