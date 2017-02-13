@@ -1,0 +1,630 @@
+@r:36rem;
+
+/*修改和去除移动端点击事件出现的背景框*/ 
+a,
+input,
+button {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/*苹果手机处理圆角*/
+input,
+button {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+body {
+    margin: 0;
+    /*禁用了复制粘贴功能*/
+    -webkit-user-select: none;
+}
+body *{
+    -webkit-user-select: none;
+    /*字体样式*/
+    font-family: helvetica;
+}
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    /*解决 iPhone 横屏时默认会放大文字的问题*/
+    -webkit-text-size-adjust: 100%;
+    overflow: auto;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+#nav1 .hover{
+    color: #32bc80;
+    border-bottom: 12/@r solid #31c378;
+}
+#hearder_title{
+    position: absolute;
+    width: 100%;
+    height: 266/@r;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    .header{
+        height: 130/@r;
+        overflow: hidden;
+        background-color: #31c37c;
+        .hd_left,.hd_right{
+            height: 130/@r;
+            line-height: 130/@r;
+        }
+        .hd_left{
+            float: left;
+            width: 220/@r;
+            color: #ffebff;
+            font-size: 54/@r;
+            text-align: center;
+        }
+        .hd_right{
+            float: right;
+            width: 484/@r;
+            font-size: 56/@r;
+            a{
+                width: 25%;
+                line-height: 130/@r;
+                float: left;
+                text-align: center;
+                color: #97e5bd;
+            }
+            a:nth-of-type(2){
+                color: #f0fffd;
+            }
+        }
+    }
+    #nav1{
+        height: 136/@r;
+        background-color: white;
+        overflow: hidden;
+        a{
+            float: left;
+            width: 152/@r;
+            height: 124/@r;
+            border-bottom: 12/@r solid transparent;
+            text-align: center;
+            color: #7c7c7c;
+            line-height: 124/@r;
+            font-size: 50/@r;
+            margin: 0 31/@r 0 31/@r;
+        }
+    }
+}
+.section_content{
+    width: 30rem;
+    top: 266/@r;
+    left: 0;
+    bottom: 0;
+    position: relative;
+    overflow: hidden;
+    #wrap1{
+        position: relative;
+        width: 30rem;
+        height: 452/@r;
+        overflow: hidden;
+        #wp1_list1{
+            width: 500%;
+            li{
+                width: 30rem;
+                float: left;
+                img{
+                    width: 30rem;
+                    height: 452/@r;
+                    display: block;
+                }
+            }
+        }
+        #spot{
+            position: absolute;
+            width: 220/@r;
+            height: 60/@r;
+            left: 50%;
+            right: 50%;
+            bottom: 20/@r;
+            margin-left: -190/@r/2;
+            span{
+                width: 25/@r;
+                height: 25/@r;
+                background: #fff;
+                float: left;
+                vertical-align: top;
+                background-color: rgba(255,255,255,.3);
+                border-radius: 50%;
+                margin: 12/@r 18/@r 10/@r 0;
+            }
+            .active{
+                background-color: rgba(255,255,255,1);
+            }
+        }
+    }
+    #menu1{
+        height: 236/@r;
+        background-color: #f7fcff;
+        overflow: hidden;
+        a{
+            float: left;
+            width: 10rem;
+            text-align: center;
+            height: 236/@r;
+            span,strong{
+                float: left;
+                line-height: 236/@r;
+            }
+            span{
+                color: #000100;
+                font-size: 50/@r;
+            }
+            strong{
+                float: left;
+                color: #31c37c;
+                font-size: 84/@r;
+                margin-left: 110/@r;
+                margin-right: 35/@r;
+            }
+        }
+    }
+    .wrap2{
+        overflow: hidden;
+        .title{
+            height: 148/@r;
+            position: relative;
+            text-align: center;
+            background-color: #f6fbfe;
+            a{
+                color: #151611;
+                font-size: 50/@r;
+                line-height: 148/@r;
+                font-weight: bold;
+            }
+            .tt_btn{
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 160/@r;
+                height: 148/@r;
+                span{
+                   float: left;
+                   width: 62/@r;
+                   height: 62/@r;
+    //             background: url(../images/6.png);
+    //             background-image: 62/@r 62/@r;
+                   border-radius: 50%;
+                   border: 1px solid #969792;
+                   text-align: center;
+                   line-height: 62/@r;
+                   color: #969792;
+                   margin-left: 25%;
+                   margin-top: 25%;
+                }
+            }
+        }
+        .wp2_list{
+            width: 1010/@r;
+            overflow: hidden;
+            margin-left: 36/@r;
+            li{
+                width: 325/@r;
+                height: 476/@r;
+                font-size: 32/@r;
+                line-height: 53/@r;
+                color: #020202;
+                float: left;
+                margin-right: 11/@r;
+                img{
+                    width: 325/@r;
+                    height: 324/@r;
+                }
+            }
+        }
+    }
+    .wrap3{
+        margin-bottom: 38/@r;
+        .wp3_banner1{
+            margin-left: 35/@r;
+            height: 198/@r;
+            margin-bottom: 20/@r;
+            img{
+                width: 496/@r;
+                height: 198/@r;
+            }
+            img:only-of-type(1){
+                margin-right: 14/@r;
+            }
+        }
+        .wp3_banner2{
+            margin-left: 35/@r;
+            height: 415/@r;
+            img{
+                width: 1010/@r;
+                height: 415/@r;
+            }
+        }
+    }
+    .wp4_list{
+        li{
+            height: 324/@r;
+            margin-bottom: 30/@r;
+            img{
+                width: 325/@r;
+                height: 324/@r;
+                float: left;
+                margin-left: 35/@r;
+                margin-right: 40/@r;
+            }
+            .wp4_text{
+                float: left;
+                margin-top: 23/@r;
+                a{
+                    display: block;
+                    height: 72/@r;
+                    color: #7b7f7e;
+                    line-height: 72/@r;
+                    font-size: 36/@r;
+                }
+                .song{
+                    color: #000100;
+                    height: 116/@r;
+                    line-height: 116/@r;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .vedio1_list{
+        margin-bottom: 163/@r;
+        li{
+           height: 410/@r;
+           font-size: 0;
+           a{
+               width: 498/@r;
+               display: inline-block;
+               img{
+                   width: 498/@r;
+                   height: 278/@r;
+               }
+               span{
+                   color: #807c7d;
+                   line-height: 64/@r;
+                   display: block;
+                   font-size: 36/@r;
+               }
+               .lrc{
+                   color: #625e5f;
+                   font-weight: bold;
+               }
+           }
+           a:nth-of-type(1){
+               margin-left: 35/@r;
+               margin-right: 16/@r;
+           } 
+        }
+    }
+}
+.footer{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 99999;
+    background-color: white;
+    border-top: 1px solid #e3e3e3;
+    height: 162/@r;
+    overflow: hidden;
+    div{
+        float: left;
+        height: 162/@r;
+    }
+    .album{
+        width: 180/@r;
+        border-radius: 50%;
+        float: left;
+        height: 162/@r;
+//      background-image: url(../images/ftb1.png);
+        background-size: 122/@r 122/@r;
+        background-repeat: no-repeat;
+        background-position: 30/@r 30/@r;
+    }
+    .songs{
+        width: 595/@r;
+        strong,span{
+            width: 100%;
+            display: block;
+            float: left;
+            line-height: 64/@r;
+        }
+        strong{
+            margin-top: 18/@r;
+            color: #040404;
+        }
+        span{
+            color: #28cf87;
+        }
+    }
+    .play{
+        float: left;
+        width: 128/@r;
+        background-image: url(../images/play.png);
+        background-size: 90/@r 91/@r;
+        background-repeat: no-repeat;
+        background-position: 20/@r 40/@r;
+        margin-top: 20/@r;
+    }
+    .music{
+        width: 177/@r;
+        background-image: url(../images/music.png);
+        background-size: 90/@r 65/@r;
+        background-repeat: no-repeat;
+        background-position: 45/@r 62/@r;
+    }
+}
+#play_mask{
+    width: 30rem;
+    height: 100%;
+    display: none;
+    background-color: #000201;
+    z-index: 999999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    .mask_hd{
+        width: 30rem;
+        height: 154/@r;
+        .mkhd_partlef{
+            width: 200/@r;
+            height: 154/@r;
+            span{
+                float: left;
+                width: 200/@r;
+                font-size: 68/@r;
+                text-align: center;
+                line-height: 154/@r;
+                color: #b8aba2;
+            }
+        }
+        #mk_song1{
+            width: 670/@r;
+            height: 154/@r;
+            color: #fff;
+            text-align: center;
+            height: 150/@r;
+            font-size: 60/@r;
+            line-height: 150/@r;
+        }
+        .mkhd_partrig{
+            width: 208/@r;
+            height: 154/@r;
+            font-size: 68/@r;
+            text-align: center;
+            line-height: 154/@r;
+            color:#b8aba2;
+            font-weight: bold;
+        }
+    }
+    .mask_bd{
+        //width: 90rem;
+        width: 30rem;
+        height: 1190/@r;
+        position: relative;
+        overflow: hidden;
+        .mask_bd_nav{
+            position: absolute;
+            left: 0;
+            bottom: -40/@r;
+            width: 30rem;
+            height: 70/@r;
+            span{
+                width: 25/@r;
+                height: 25/@r;
+                border-radius: 50%;
+                background-color: #91908e;
+                margin-right: 30/@r;
+            }
+            span:nth-of-type(1){
+                margin-left: 520/@r;
+            }
+            .color3{
+                background-color: #fff;
+            }
+//          background-color: pink;
+        }
+        .maskbd_box{
+            width: 60rem;
+            height: 1190/@r;
+             //歌词展示部分
+            .mask_wrap{
+                width: 30rem;
+                height: 1190/@r;
+                float: left;
+                .msk_wptitle{
+                    strong{
+                        width: 30rem;
+                        display: block;
+                        text-align: center;
+                        color: #fff;
+                        text-align: center;
+                    }
+                    .mk_singer1{
+                        height: 50/@r;
+                        font-size: 44/@r;
+                        line-height: 50/@r;
+                    }
+                    .mkhd_ct{
+                        span{
+                            float: left;
+                            width: 150/@r;
+                            height: 56/@r;
+                            color: #3d9563;
+                            border: 2px solid #3d9563;
+                            margin-right: 20/@r;
+                            font-size: 44/@r;
+                            text-align: center;
+                            border-radius: 20/@r;
+                            margin-top: 44/@r;
+                            margin-bottom: 44/@r;
+                        }
+                        span:nth-of-type(1){
+                            margin-left: 316/@r;
+                        }
+                    }
+                }
+                .song_album{
+                    width: 770/@r;
+                    height: 770/@r;
+                    border: 10/@r solid #000;
+                    border-radius: 50%;
+                    margin-left: 150/@r;
+                    background-color: yellowgreen;
+                    overflow: hidden;
+                    .album_img{
+                        width: 770/@r;
+                        height: 770/@r;
+                    }
+                }
+                .song_lrc{
+                    width: 30rem;
+                    height: 200/@r;
+                    text-align: center;
+                    color: #27bb7d;
+                    font-size: 50/@r;
+                    line-height: 200/@r;
+                }
+            }
+            //歌词列表页
+            .wrap_list{
+                width: 30rem;
+                height: 29rem;
+                margin-top: 80/@r;
+                overflow: hidden;
+                position: relative;
+                .lirc_list{
+                    width: 30rem;
+                    position: absolute;
+                    li{
+                        width:800/@r;
+                        line-height: 106/@r;
+                        font-size: 56/@r;
+                        color: #b2b2b2;
+                        margin-left: 140/@r;
+                        text-align: center;
+                    }
+                    .color2{
+                        color: #4ae79a;
+                    }
+                }
+            }
+            
+            
+        }
+       
+        #nav2{
+            height: 96/@r;
+            span{
+                width: 20/@r;
+                height: 20/@r;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+        }
+    }
+    .mask_ft{
+        width: 30rem;
+        height: 570/@r;
+        //进度条
+        .song_progress{
+            width: 30rem;
+            height: 142/@r;
+            #song_current,#song_duration{
+                width: 190/@r;
+                height: 142/@r;
+                line-height: 142/@r;
+                text-align: center;
+                color: #5d4e55;
+                font-size: 48/@r;
+                font-weight: bold;
+            }
+            .song_line{
+                width: 694/@r;
+                height: 142/@r;
+                position: relative;
+                #process_line{
+                    width: 694/@r;
+                    height: 18/@r;
+                    background-color: #4d4d4d;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    margin-top: -9/@r;
+                    #line_pocess{
+                        width: 0/@r;
+                        height: 18/@r;
+                        background-color: #32bf7a;
+                    }
+                }
+                #process_pot{
+                    width: 56/@r;
+                    height: 56/@r;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    border-radius: 50%;
+                    background-color: #32bf7a;
+                    margin-top: -28/@r;
+                }
+            }
+        }
+        .song_play{
+            width: 30rem;
+            height: 280/@r;
+//          background-color: cornflowerblue;
+            font-size: 0;
+            #prev,#next{
+                width: 190/@r;
+                height: 280/@r;
+            }
+            #prev{
+                margin-left: 200/@r;
+            }
+            #player{
+                width: 320/@r;
+                height: 280/@r;
+            }
+        }
+        .song_bootom{
+            width: 30rem;
+            height: 150/@r;
+            font-size: 0;
+            img{
+                width: 200/@r;
+                height: 104/@r;
+            }
+            img:nth-of-type(1){
+                margin-left: 50/@r;
+            }
+        }
+    }
+    
+    
+    
+
+    
+}

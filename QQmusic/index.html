@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<title></title>
+		<script>
+			(function () {
+				var html = document.documentElement;
+				var hWidth = html.getBoundingClientRect().width;
+				html.style.fontSize = hWidth/30 + "px";
+			})()
+		</script>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="bs/css/bootstrap.css" />
+		<script src="js/data.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/tools.js"></script>
+		<script src="js/m.touch.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<div id="hearder_title">
+			<header class="header">
+				<div class="hd_left">音乐馆</div>
+				<div class="hd_right">
+					<a href="javascript:;" class="glyphicon glyphicon-headphones"></a>
+					<a href="javascript:;" class="glyphicon glyphicon-music"></a>
+					<a  href="javascript:;" class="glyphicon glyphicon-align-justify"></a>
+					<a  href="javascript:;" class="glyphicon glyphicon-search"></a>
+				</div>
+			</header>
+			<nav id="nav1">
+				<a href="javascript:;" class="hover">精选</a>
+				<a href="javascript:;">排行</a>
+				<a href="javascript:;">歌单</a>
+				<a href="javascript:;">电台</a>
+				<a href="javascript:;">MV</a>
+			</nav>
+		</div>
+		<!--精选部分的结构-->
+		<section class="section_content">
+			<div id="wrap1">
+				<ul id="wp1_list1">
+					<li><img src="images/2.jpg" alt="" /></li>
+					<li><img src="images/3.jpg" alt="" /></li>
+					<li><img src="images/4.jpg" alt="" /></li>
+					<li><img src="images/1.jpg" alt="" /></li>
+					<li><img src="images/5.jpg" alt="" /></li>
+				</ul>
+				<div id="spot">
+					<span class="active"></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<div id="menu1">
+				<a href="javascript:;">
+					<strong class="glyphicon glyphicon-user"></strong>
+					<span id="">歌手</span>
+				</a>
+				<a href="javascript:;">
+					<strong class="glyphicon glyphicon-th-large"></strong>
+					<span id="">分类</span>
+				</a>
+				<a href="javascript:;">
+					<strong class="glyphicon glyphicon-play-circle"></strong>
+					<span id="">专辑</span>
+				</a>
+			</div>
+			<div class="wrap2">
+				<div class="title">
+					<a href="javascript:;">热门推荐</a>
+					<div class="tt_btn">
+						<span id="">></span>
+					</div>
+				</div>
+				<ul class="wp2_list">
+					<li>
+						<a href="#"><img src="images/9.png"/></a>
+						<span id="">
+							只要想到你，全世界回到下雪的季节
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="images/10.png"/></a>
+						<span id="">
+							地球人已中毒：BrunoMars经典…
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="images/11.png"/></a>
+						<span id="">
+							十八般武艺：王力宏填词作曲精选
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="images/12.png"/></a>
+						<span id="">
+							滚蛋吧，不开心！绝不后悔的正能量歌…
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="images/13.png"/></a>
+						<span id="">
+							这些歌，让你想起了谁？
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="images/14.png"/></a>
+						<span id="">
+							只靠一把吉他就让我们记住了的歌手
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="wrap2">
+				<div class="title">
+					<a href="javascript:;">新歌速递</a>
+					<div class="tt_btn">
+						<span id="">></span>
+					</div>
+				</div>
+				<ul class="wp2_list">
+					<li>
+						<a href="#"><img src="images/15.png"/></a>
+						<span id="">
+							跟着祖儿探索千变万化感情世界
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="images/16.png"/></a>
+						<span id="">
+							VIXX年度企划特辑惊喜来袭
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="images/17.png"/></a>
+						<span id="">
+							韩剧《蓝色大海的传说》原声热播
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="wrap3 wrap2">
+				<div class="title">
+					<a href="javascript:;">专栏</a>
+					<div class="tt_btn">
+						<span id="">></span>
+					</div>
+				</div>
+				<div class="wp3_banner1">
+					<a href="javascript:;"><img src="images/18.png"/></a>
+					<a href="javascript:;"><img src="images/19.png"/></a>
+				</div>
+				<div class="wp3_banner2">
+					<a href="javascript:;"><img src="images/20.png"/></a>
+				</div>
+			</div>
+			<div class="wrap2 wrap3">
+				<div class="title">
+					<a href="javascript:;">独立原创</a>
+					<div class="tt_btn">
+						<span id="">></span>
+					</div>
+				</div>
+				<ul class="wp2_list">
+					<li>
+						<a href="#"><img src="images/21.png"/></a>
+						<span id="">
+							《听·见》不一样的安来宁
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="images/22.png"/></a>
+						<span id="">
+							小众|每一首都值得私藏
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="images/23.png"/></a>
+						<span id="">
+							你与我
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="wrap2 wrap4">
+				<div class="title">
+					<a href="javascript:;">下雪天有电台暖心曲</a>
+					<div class="tt_btn">
+						<span id="">></span>
+					</div>
+				</div>
+				<ul class="wp4_list">
+					<li>
+						<a href="#"><img src="images/24.png"/></a>
+						<div class="wp4_text">
+							<a href="javascript:;" class="song">思念</a>
+							<a href="javascript:;">白芍花开-张碧晨</a>
+							<a href="javascript:;">有没有一首歌能唱出我的思念</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/25.png"/></a>
+						<div class="wp4_text">
+							<a href="javascript:;" class="song">浪漫韩剧</a>
+							<a href="javascript:;">雪花(Gummy)</a>
+							<a href="javascript:;">看浪漫韩剧，听甜蜜情歌</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="wrap2 vedio1">
+				<div class="title">
+					<a href="javascript:;">表白粉丝的MV</a>
+					<div class="tt_btn">
+						<span id="">></span>
+					</div>
+				</div>
+				<ul class="vedio1_list">
+					<li>
+						<a href="javascript:;">
+							<img src="images/26.png"/>
+							<span class="lrc">
+								Milky Way
+							</span>
+							<span>
+								与粉丝在一起好幸福
+							</span>
+						</a>
+						<a href="javascript:;">
+							<img src="images/27.png"/>
+							<span class="lrc">
+								如果你向我…
+							</span>
+							<span>
+								Apink五周年粗卡！回馈粉丝
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="images/28.png"/>
+							<span class="lrc">
+								致爱(Your Song)
+							</span>
+							<span>
+								听小鹿“送给你的歌”
+							</span>
+						</a>
+						<a href="javascript:;">
+							<img src="images/29.png"/>
+							<span class="lrc">
+								因你而在
+							</span>
+							<span>
+								老林永远对粉丝那么暖
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!--尾部的音乐播放器-->
+		<div class="footer">
+			<img class="album" />
+			<div class="songs">
+				<strong id="songs_text">贝加尔湖畔</strong>
+				<span id="songs_lrc">点击按钮开始播放音乐</span>
+			</div>
+			<img class="play">
+			<div class="music"></div>
+		</div>
+		<!--歌曲播放-->
+		<audio src="" id="audio1"></audio>
+		<div id="play_mask">
+			<div class="mask_hd clearfix">
+				<div class="fl mkhd_partlef">
+					<span class="glyphicon glyphicon-chevron-down"></span>
+				</div>
+				<strong id="mk_song1" class="fl"></strong>
+				<div class="fl mkhd_partrig">…</div>
+			</div>
+			<div class="mask_bd">
+				<div class="mask_bd_nav">
+					<span id="" class="fl color3"></span>
+					<span id="" class="fl"></span>
+				</div>
+				<div class="maskbd_box">
+					<div class="mask_wrap" id="mask_wrap1">
+						<div class="msk_wptitle">
+							<strong class="mk_singer1"></strong>
+							<div class="mkhd_ct clearfix">
+								<span>标准</span>
+								<span>MV</span>
+								<span>音效</span>
+							</div>
+						</div>
+						<!--歌曲封面-->
+						<div class="song_album">
+							<img src="" class="album_img"/>
+						</div>
+						<div class="song_lrc">
+							<!--泡沫 - 邓紫棋-->
+						</div>
+					</div>
+					<div class="mask_wrap wrap_list">
+						<ul class="lirc_list">
+							<!--<li class="color2">泡沫 - 邓紫棋</li>
+							<li>泡沫 - 邓紫棋</li>
+							<li>专辑：《泡沫》</li>
+							<li>演唱：邓紫棋</li>
+							<li>阳光下的泡沫 是彩色的</li>
+							<li>就像被骗的我 是幸福的</li>
+							<li>追究什么对错 你的谎言 基于你还爱我</li>
+							<li>美丽的泡沫 虽然一刹花火</li>
+							<li>你所有承诺 虽然都太脆弱</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="mask_ft">
+				<div class="song_progress clearfix">
+					<div id="song_current" class="fl">
+						<!--00:00-->
+					</div>
+					<div class="song_line fl">
+						<div id="process_line">
+							<div id="line_pocess"></div>
+						</div>
+						<div id="process_pot"></div>
+					</div>
+					<div id="song_duration" class="fl">
+						<!--04:33-->
+					</div>
+				</div>
+				<div class="song_play">
+					<img src="images/prev1.png" id="prev"/>
+					<img src="images/player1.png" id="player"/>
+					<img src="images/next1.png" id="next"/>
+				</div>
+				<div class="song_bootom">
+					<img src="images/ft1.png"/>
+					<img src="images/ft2.png"/>
+					<img src="images/ft3.png"/>
+					<img src="images/ft4.png"/>
+					<img src="images/ft5.png"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
