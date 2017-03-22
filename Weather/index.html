@@ -47,7 +47,33 @@ function getWeatherInfo() {
     text.push("Temperature: " + weather.now.temperature);
     obj.innerText = text.join("\n");
 	}
-
+getQuiltyInfo();
+function getQuiltyInfo() {
+//	var UID = "U785B76FC9"; // 测试用 用户ID
+//	var KEY = "4r9bergjetiv1tsd"; // 测试用key，
+	var UID = "UC99CB43F9"; // 自己的用户ID
+	var KEY = "uvjf00gaak0wsydh"; //自己的 Key
+	var API = "https://api.thinkpage.cn/v3/air/now.json"; // 获取天气质量实况
+	var LOCATION = 'shanghai';
+	var ts = Math.floor((new Date()).getTime() / 1000);// 获取当前时间戳
+	var str = "ts="+ts+"&uid=" + UID;
+  var sig = CryptoJS.HmacSHA1(str, KEY).toString(CryptoJS.enc.Base64);
+  sig = encodeURIComponent(sig);
+  str = str + "&sig=" + sig;
+  // 构造最终请求的 url
+  var url = API + "?location=" + LOCATION + "&" + str + "&callback=cb";
+	var newScript = document.createElement('script');
+  newScript.type = 'text/javascript';
+  newScript.src = url;
+  $('body').append(newScript);
+}
+var cb = function(data) {
+	var obj = document.getElementById('content2');
+	var weather = data.results[0];
+	var text = [];
+	text.push("Quality: " + weather.air.city.quality);
+	obj.innerText = text.join("\n");
+}
 </script>
 </body>
 </html>
