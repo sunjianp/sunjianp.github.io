@@ -13,7 +13,7 @@
   <div id="content2">
   </div>
 <script>
-getWeatherInfo();
+//getWeatherInfo();
 function getWeatherInfo() {
 //	var UID = "U785B76FC9"; // 测试用 用户ID
 //	var KEY = "4r9bergjetiv1tsd"; // 测试用key，
@@ -36,9 +36,7 @@ function getWeatherInfo() {
   newScript.type = 'text/javascript';
   newScript.src = url;
   $('body').append(newScript);
-  
 }
-
 	//天气
 	var callback = function(data) {
     var obj = document.getElementById('content1');
