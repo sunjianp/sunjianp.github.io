@@ -13,12 +13,12 @@
   <div id="content2">
   </div>
 <script>
-getWeatherInfo();
+//getWeatherInfo();
 function getWeatherInfo() {
-//	var UID = "U785B76FC9"; // 测试用 用户ID
-//	var KEY = "4r9bergjetiv1tsd"; // 测试用key，
-	var UID = "UC99CB43F9"; // 自己的用户ID
-	var KEY = "uvjf00gaak0wsydh"; //自己的 Key
+	var UID = "U785B76FC9"; // 测试用 用户ID
+	var KEY = "4r9bergjetiv1tsd"; // 测试用key，
+//	var UID = "UC99CB43F9"; // 自己的用户ID
+//	var KEY = "uvjf00gaak0wsydh"; //自己的 Key
 	var API = "https://api.thinkpage.cn/v3/weather/now.json"; // 获取天气实况
 //		  var API = "https://api.thinkpage.cn/v3/air/now.json"; // 获取天气质量实况
   var LOCATION = 'shanghai'; // 除拼音外，还可以使用 v3 id、汉语等形式
@@ -39,7 +39,10 @@ function getWeatherInfo() {
   getQuiltyInfo();
   
 }
+getQuiltyInfo();
 function getQuiltyInfo() {
+//	var UID = "U785B76FC9"; // 测试用 用户ID
+//	var KEY = "4r9bergjetiv1tsd"; // 测试用key，
 	var UID = "UC99CB43F9"; // 自己的用户ID
 	var KEY = "uvjf00gaak0wsydh"; //自己的 Key
 	var API = "https://api.thinkpage.cn/v3/air/now.json"; // 获取天气质量实况
