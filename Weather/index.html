@@ -21,7 +21,7 @@ function getWeatherInfo() {
 	var KEY = "uvjf00gaak0wsydh"; //自己的 Key
 	var API = "https://api.thinkpage.cn/v3/weather/now.json"; // 获取天气实况
 //		  var API = "https://api.thinkpage.cn/v3/air/now.json"; // 获取天气质量实况
-  var LOCATION = 'beijing'; // 除拼音外，还可以使用 v3 id、汉语等形式
+  var LOCATION = 'shanghai'; // 除拼音外，还可以使用 v3 id、汉语等形式
   // 获取当前时间戳
   var ts = Math.floor((new Date()).getTime() / 1000);
   // 构造验证参数字符串
@@ -36,9 +36,27 @@ function getWeatherInfo() {
   newScript.type = 'text/javascript';
   newScript.src = url;
   $('body').append(newScript);
+  getQuiltyInfo();
   
 }
-
+function getQuiltyInfo() {
+	var UID = "UC99CB43F9"; // 自己的用户ID
+	var KEY = "uvjf00gaak0wsydh"; //自己的 Key
+	var API = "https://api.thinkpage.cn/v3/air/now.json"; // 获取天气质量实况
+	var LOCATION = 'shanghai';
+	var ts = Math.floor((new Date()).getTime() / 1000);// 获取当前时间戳
+	var str = "ts="+ts+"&uid=" + UID;
+  var sig = CryptoJS.HmacSHA1(str, KEY).toString(CryptoJS.enc.Base64);
+  sig = encodeURIComponent(sig);
+  str = str + "&sig=" + sig;
+  // 构造最终请求的 url
+  var url = API + "?location=" + LOCATION + "&" + str + "&callback=cb";
+	var newScript = document.createElement('script');
+  newScript.type = 'text/javascript';
+  newScript.src = url;
+  $('body').append(newScript);
+}
+	//天气
 	var callback = function(data) {
     var obj = document.getElementById('content1');
     var weather = data.results[0];
@@ -46,6 +64,14 @@ function getWeatherInfo() {
     text.push("Location: " + weather.location.path);
     text.push("Weather: " + weather.now.text);
     text.push("Temperature: " + weather.now.temperature);
+    obj.innerText = text.join("\n");
+	}
+	//空气质量
+	var cb = function(data) {
+    var obj = document.getElementById('content2');
+    var weather = data.results[0];
+    var text = [];
+    text.push("Quality: " + weather.air.city.quality);
     obj.innerText = text.join("\n");
 	}
 </script>
