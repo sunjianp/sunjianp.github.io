@@ -38,7 +38,7 @@
 			var KEY = "uvjf00gaak0wsydh"; //自己的 Key
 			var API = "https://api.thinkpage.cn/v3/weather/now.json"; // 获取天气实况
 //		  var API = "https://api.thinkpage.cn/v3/weather/now.json"; // 获取天气质量实况
-		  var LOCATION = 'shanghai'; // 除拼音外，还可以使用 v3 id、汉语等形式
+		  var LOCATION = wz.x+':'+wz.y; // 除拼音外，还可以使用 v3 id、汉语等形式
 		  // 获取当前时间戳
 		  var ts = Math.floor((new Date()).getTime() / 1000);
 		  // 构造验证参数字符串
