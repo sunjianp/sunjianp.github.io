@@ -173,6 +173,7 @@ function mscroll(wrap,callBack) {
 		);
 	}
 }
+//多指操作
 function getDistance(p1, p2) {
 	var x = p1.pageX - p2.pageX;
 	var y = p1.pageY - p2.pageY;

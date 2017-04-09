@@ -1,316 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,user-scalable=no">
-<title>Document</title>
-<script type="text/javascript" src="js/transform.js"></script>
-<script type="text/javascript">
-	(function(){
-		var html = document.querySelector("html");
-		var width = html.getBoundingClientRect().width;
-		html.style.fontSize = width/16 + "px";
-	})();
-	var dataUrl = [];
-	for(var i = 0; i < 50; i++) {
-		dataUrl.push("pics/"+(i%16+1)+".jpg");
-	}
-	document.addEventListener("touchstart",function(e){
-		e.preventDefault();
-	});
-	window.onload = function() {
-		var wrap = document.querySelector("#wrap");
-		var child = wrap.children[0];
-		var bar = document.querySelector("#bar");
-		var pics = document.querySelector(".pics");
-		var li = pics.getElementsByTagName("li");
-		var footer = document.querySelector("footer");
-		var length = 12;
-		var start = 0;
-		var minTop = wrap.getBoundingClientRect().top;
-		var maxTop = minTop + wrap.getBoundingClientRect().height;
-		var maxScroll = wrap.clientHeight - child.offsetHeight;
-		var isLoad = false;
-		var footerH = footer.offsetHeight;
-		var isOver = false;
-		var scaleBar = wrap.clientHeight/child.offsetHeight;
-		var canvas = document.querySelector("#canvas");
-		var canvasXT = canvas.getContext("2d");
-		var clos = document.querySelector("#clos"); 
-		var bigImg = document.querySelector("#bigImg");
-		gesCanvas();
-		function gesCanvas(){
-			cssTransform(canvas,"translateZ",0.01);
-			var startS = 0;
-			var startR = 0;
-			var callBack = {
-				start:function(e) {
-					startS = cssTransform(this,"scale");
-					startR = cssTransform(this,"rotate");
-				},
-				change:function(e) {
-					var disS = e.scale;
-					var disR = e.rotation;
-					cssTransform(this,"scale",startS*disS);
-					cssTransform(this,"rotate",startR+disR);
-				}
-			}
-			gesture(canvas,callBack);	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title></title>
+	<script type="text/javascript">
+		(function () {
+			var html = document.querySelector('html');
+			var width = html.getBoundingClientRect().width;
+			html.style.fontSize = width/16 + 'px';
+		})()
+		var dataUrl = new Array();
+		for (var i=0;i<100;i++) {
+			dataUrl.push('img/'+(i%16+1)+'.jpg');
 		}
-		cssTransform(footer,"scale",0);
-		create();
-		cssTransform(child,"translateZ",0.01);
-		cssTransform(bar,"translateZ",0.01);
-		clos.addEventListener(
-			"touchend",
-			function(){
-				bigImg.style.opacity = 0;
-				cssTransform(bigImg,"scale",0);
-			}
-		);
-		callBack = {
-			start: function() {
-				child.style.transition = "none";
-				var scrollTop = cssTransform(child,"translateY");
-				maxScroll = wrap.clientHeight - child.offsetHeight;
-				scaleBar = wrap.clientHeight/child.offsetHeight;
-				var barTop = -(scrollTop*scaleBar);
-				cssTransform(bar,"translateY",barTop);
-				bar.style.height = wrap.clientHeight*scaleBar + "px";
-				bar.style.opacity = 1;
-				if(!isOver&&scrollTop <= maxScroll) {
-					isLoad = true;
-				}
-			},
-			in:function(){
-				createImg();
-				var scrollTop = cssTransform(child,"translateY");
-				var barTop = -(scrollTop*scaleBar);
-				cssTransform(bar,"translateY",barTop);
-				if(!isOver&&isLoad) {
-					var over = maxScroll - scrollTop;
-					var scale = over/footerH;
-					scale = scale > 1?1:scale;
-					scale = scale < 0?0:scale;
-					cssTransform(footer,"scale",scale);
-				}
-			},
-			end: function() {
-				var scrollTop = cssTransform(child,"translateY");
-				if(!isOver&&isLoad&&maxScroll - scrollTop >= footerH){
-					clearInterval(child.scroll);
-					start += length;
-					console.log(start);
-					create();
-					bar.style.opacity = 0;
-				}
-				isLoad = false;
-			},
-			over: function() {
-				bar.style.opacity = 0;
-			}
-		};
-		mscroll(wrap,callBack);
-		function create() {
-			if(!isOver&&start >= dataUrl.length) {
-				footer.innerHTML = "没有更多的图片了";
-				setTimeout(
-					function() {
-						child.style.transition = ".3s";
-						cssTransform(child,"translateY",maxScroll);	
-						isOver = true;
-						footer.style.opacity = 0;
-					},2000
-				);
-				return;
-			}
-			var end = start + length;
-			end = end > dataUrl.length?dataUrl.length:end;
-			for(var i = start; i < end; i++){
-				var li = document.createElement("li");
-				li.src = dataUrl[i];
-				li.isLoad = false;
-				li.isMove = false;
-				li.addEventListener(
-					"touchstart",
-					function(){
-						this.isMove = false;
-					}
-				);
-				li.addEventListener(
-					"touchmove",
-					function(){
-						this.isMove = true;
-					}
-				);
-				li.addEventListener(
-					"touchend",
-					function(){
-						if(this.isMove) {
-							return;
-						}
-						var left = this.getBoundingClientRect().left;
-						var top = this.getBoundingClientRect().top;
-						var img = new Image();
-						img.src = this.src;
-						img.onload = function() {
-							canvas.width = img.width;
-							canvas.height = img.height;
-							cssTransform(canvas,"scale",1);
-							cssTransform(canvas,"rotate",0);
-							canvasXT.drawImage(img,0,0,canvas.width,canvas.height);
-							bigImg.style.WebkitTransformOrigin = bigImg.style.transformOrigin = left+"px "+top+"px";
-							bigImg.style.opacity = 1;
-							cssTransform(bigImg,"scale",1);
-						};
-						
-					}
-				);
-				pics.appendChild(li); 
-			}
-			createImg();
-			cssTransform(footer,"scale",0);
-		}
-		function createImg() {
-			for(var i = 0; i < li.length; i++){
-				var top = li[i].getBoundingClientRect().top;
-				if(!li[i].isLoad&&top >= minTop && top < maxTop){
-					li[i].isLoad = true;
-					showImg(li[i]);
-				}
-			}
-		}
-		function showImg(li) {
-			var img = new Image();
-			img.src = li.src;
-			img.onload = function() {
-				var c = document.createElement("canvas");
-				var ctx = c.getContext("2d");
-				c.width = img.width;
-				c.height= img.height;
-				ctx.drawImage(img,0,0,c.width,c.height);
-				li.appendChild(c);
-				setTimeout(
-					function() {
-						c.style.opacity = 1;
-					},100
-				);
-			};
-		}
-	};
-</script>
-<style type="text/css">
-body {
-	margin: 0;
-}
-html,
-body {
-	height: 100%;
-	overflow: hidden;
-}
-header {
-	height: 2rem;
-	background: #000;
-	font: .8rem/2rem "宋体";
-	color: #fff;
-	text-align: center;
-}
-#wrap {
-	position: absolute;
-	top: 2rem;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	overflow: hidden;
-}
-#scroll {
-	position: relative;
-}
-.pics {
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-.pics li{
-	float: left;
-	width: 7rem;
-	margin: .5rem;
-	min-height: 7rem;
-	border-radius: 5px;
-	background: url(pics/loadingImg.gif) no-repeat #ccc center center;
-}
-.pics canvas {
-	display: block;
-	width: 7rem;
-	border-radius: 5px;
-	opacity: 0;
-	transition: .5s opacity;
-}
-footer {
-	position: absolute;
-	bottom: -80px;
-	left: 0;
-	width: 100%;
-	height: 80px;
-	font: .7rem/80px "宋体";
-	text-align:  center;
-	transition: .3s opacity;
-}
-#bar {
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 4px;
-	height: 0;
-	background: rgba(0,0,0,.8);
-	opacity: 0;
-	transition: .3s opacity;
-}
-#bigImg {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: #ccc;
-	z-index: 3;
-	-webkit-transform: scale(0);
-	transform: scale(0);
-	opacity: 0;
-	transition: .3s -webkit-transform, .5s opacity;
-}
-#clos {
-	float: right;
-	color: #fff;
-	text-decoration:  none;
-}
-#canvas {
-	position:  absolute;
-	left: 50%;
-	top: 50%;
-	margin: -6rem 0 0 -6rem;
-	width: 12rem;
-	height: 12rem;
-	background: #fff;
-}
-</style>
+//		console.log(dataUrl)
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
 </head>
 <body>
-<header>妙味-相册</header>
-<section id="wrap">
-	<div id="scroll">
-		<ul class="pics">
-			<!--<li></li>
-			<li></li>-->
-		</ul>
-		<footer>上滑加载更多内容</footer>
-	</div>
-	<div id="bar"></div>
-</section>	
-<section id="bigImg">
-	<header>大图预览 <a href="javascript:;" id="clos">关闭</header>
-	<canvas id="canvas"></canvas>
-</section>
+	<header>百度图吧</header>
+	<section id="wrap">
+		<div id="scroll">
+			<ul class="pics">
+				<!--<li></li>
+				<li></li>-->
+			</ul>
+			<footer>上滑加载更多内容</footer>
+		</div>
+		<div id="bar"></div>
+	</section>
+	<section id="bigImg">
+		<header>
+			大图预览
+			<a href="javascript:;" id="close">关闭</a>
+		</header>
+		<canvas id="canvas"></canvas>
+	</section>
+	<script src="js/transform.js"></script>
+	<script src="js/index.js"></script>
 </body>
 </html>
