@@ -1,0 +1,105 @@
+body{
+	margin: 0;
+}
+body,html{
+	height: 100%;
+	/*position: absolute;*/
+	overflow: hidden;
+}
+ul,li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img{
+	vertical-align: top;
+	border: none;
+}
+header{
+	height: 2rem;
+	background-color: #000;
+	font: .8rem/2rem "宋体";
+	color: #fff;
+	/*font-weight: bold;*/
+	text-align: center;
+}
+#wrap{
+	position: absolute;
+	top: 2rem;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+}
+#scroll{
+	position: relative;
+}
+.pics{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.pics li{
+	float: left;
+	width: 7rem;
+	margin: .5rem;
+	min-height: 7rem;
+	/*background: #ccc;*//*背景颜色*/
+	border-radius: 5px;
+	background: url(../img/loadingImg.gif) no-repeat #ccc center center;
+}
+.pics canvas{
+	display: block;
+	width: 7rem;
+	border-radius: 5px;
+	opacity: 0;
+	transition: .5s opacity;
+}
+footer{
+	position: absolute;
+	bottom: -80px;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	font: .7rem/80px "宋体";
+	text-align: center;
+	transition: .5s opacity;
+}
+#bar{
+	width: 4px;
+	height: 0;
+	background-color: rgba(0,0,0,.8);
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	transition: .3s opacity;
+}
+#bigImg{
+	width: 100%;
+	height: 100%;
+	background-color: #eee;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	opacity: 0;
+	transition: .5s -webkit-transform,.5s opacity;
+}
+#canvas{
+	width: 12rem;
+	height: 12rem;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -6rem 0 0 -6rem;
+}
+#close{
+	float: right;
+	color: #fff;
+	text-decoration: none;
+}
